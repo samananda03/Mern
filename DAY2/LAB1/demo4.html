@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding 2 numbers</title>
+    <script>
+        function validate(){
+            let n1 = Number(document.querySelector("#num1").value);
+            let n2 = Number(document.querySelector("#num2").value);
+
+            if(isNaN(n1)||isNaN(n2)){
+                alert("The number is not entered");
+            }
+            else{
+                alert('${n1} + ${n2} = ${n1 + n2}');
+            }
+
+            
+        }
+    </script>
+</head>
+<body>
+    <h2>Adding 2 numbers</h2>
+    <form>
+        <fieldset>
+            <legend>Calculate</legend>
+            <label>Num 1:</label>
+            <input id="num1" name="num1" type="number">
+            <br><br>
+            <label>Num2:</label>
+            <input id="num2" name="num2" type="number"><br>
+            <input type="button" onclick="validate()" value="ADD"/>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm" action="">
+        <label>Name:</label>
+        <input id="myInput" name="uname" type="text" />
+        <input id="myPswd" name="pwd" type="password"/>
+        <input type="button" value="submit" onclick="displayOp()" />
+    </form>
+    <script>
+        function displayOp() {
+            
+            const uname = document.getElementById("myInput").value;
+            const pwd = document.getElementById("myPswd").value;
+
+               console.log("Logging in"+uname+"password"+pwd);
+        }
+    </script>
+    
+</body>
+</html>

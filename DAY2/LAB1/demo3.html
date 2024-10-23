@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <label>Enter the day(Mon-Sat): </label>
+        <input type="text" id="dayInput">
+        <button onclick="getDay()">Submit</button>
+        <p id="outputMessage"></p>
+    
+    <script>
+        function getDay(){
+            let day = document.getElementById("dayInput").value;
+            let message;
+            switch(day){
+                case "Monday":
+                    message = "Its start of the week";
+                    break;
+                case "Tuesday":
+                    message = "Its second day of week";
+                    break;
+                case "Wednesday":
+                    message = "Its mid of week";
+                    break;
+                case "Thursday":
+                    message = "Close to the weekend";
+                    break;
+                case "Friday":
+                    message = "Finally Friday!";
+                    break;
+                case "Saturday":
+                    message = "Its weekend";
+                    break;
+                default:
+                    message = "PLease enter valid day";
+                
+            }
+            console.log(message);
+            document.getElementById("outputMessage").innerText = message;
+        }
+    </script>
+</body>
+</html>

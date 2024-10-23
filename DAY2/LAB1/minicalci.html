@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Mini Calculator</h1>
+    <div class="container" style="border: 1px solid black; max-width: 300px; padding: 20px;">
+        <label>Enter first number: </label><br>
+    <input id="num1" type="number"><br>
+    <label>Enter second number: </label><br>
+    <input type="number" id="num2"><br><br>
+
+    &nbsp;<button onclick="add()">Add</button> &nbsp;
+    <button onclick="subtract()">Subtract</button><br><br>
+    &nbsp;<button onclick="multiply()">Multiply</button>&nbsp;
+    <button onclick="divide()">Divide</button>
+    <button onclick="reset()">Reset</button>
+
+    <h3>Result:<span id="result"></span></h3>
+
+    <script>
+        function add(){
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const sum = num1+num2;
+            document.getElementById('result').innerText= sum;
+        }
+        function subtract(){
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const result = num1-num2;
+            document.getElementById('result').innerText= result;
+        }
+        function multiply(){
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const result = num1*num2;
+            document.getElementById('result').innerText= result;
+        }
+        function divide(){
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const result = num1/num2;
+            document.getElementById('result').innerText= result;
+        }
+        function reset(){
+            document.getElementById('num1').value= '';
+            document.getElementById('num2').value = '';
+            document.getElementById('result').innerText= '';
+        }
+    </script>
+    </div>
+    
+
+</body>
+</html>
